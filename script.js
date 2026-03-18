@@ -40,7 +40,7 @@ async function buscar() {
 
   } catch (erro) {
     console.log(erro);
-    resultado.innerHTML = "<p>Erro ao buscar músicas 😢</p>";
+    resultado.innerHTML = "<p>Erro ao buscar músicas</p>";
   }
 }
 
