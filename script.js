@@ -3,7 +3,7 @@ async function buscar() {
   const resultado = document.getElementById("resultado");
 
   if (!termo) {
-    resultado.innerHTML = "<p>Ecreva aqui...</p>";
+    resultado.innerHTML = "<p>Escreva aqui...</p>";
     return;
   }
 
