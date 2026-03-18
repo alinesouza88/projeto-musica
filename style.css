@@ -1,65 +1,129 @@
-body{
-font-family: Arial;
-margin:0;
-padding:0;
-
-background-image: url("https://images.unsplash.com/photo-1511379938547-c1f69419868d");
-background-size: cover;
-background-position: center;
-
-color:white;
-text-align:center;
+b* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-background: rgba(0,0,0,0.7);
-min-height:100vh;
-padding:40px;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url("https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2") no-repeat center/cover;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1{
-font-size:40px;
-margin-bottom:20px;
+/* CONTAINER PRINCIPAL */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
 }
 
-input{
-padding:10px;
-width:220px;
-border:none;
-border-radius:5px;
+/* TÍTULO */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
-button{
-padding:10px 15px;
-border:none;
-background:#ff3c3c;
-color:white;
-border-radius:5px;
-cursor:pointer;
+/* ÁREA DE BUSCA */
+input {
+  width: 70%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
 
-button:hover{
-background:#ff1a1a;
+button {
+  background: linear-gradient(135deg, #ff7a00, #ffb347);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 122, 0, 0.5);
 }
 
-#resultado{
-margin-top:30px;
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff9500, #ffc76b);
+  box-shadow: 0 6px 20px rgba(255, 149, 0, 0.7);
 }
 
-.musica{
-background:white;
-color:black;
-padding:10px;
-width:200px;
-border-radius:10px;
-box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+button:active {
+  transform: scale(0.95);
+}
+/* RESULTADOS */
+#resultado {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.musica img{
-width:100%;
-border-radius:10px;
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 15px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+/* IMAGEM */
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* PLAYER */
+audio {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
 }
