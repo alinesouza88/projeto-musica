@@ -50,3 +50,7 @@ document.getElementById("pesquisa").addEventListener("keypress", function(e) {
     buscar();
   }
 });
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
